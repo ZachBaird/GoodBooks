@@ -32,7 +32,10 @@ namespace GoodBooks.Services
             var bookToDelete = _db.Books.Find(bookId);
 
             if (bookToDelete != null)
+            {
                 _db.Remove(bookToDelete);
+                _db.SaveChanges();
+            }
             else
                 throw new InvalidOperationException("Cannot delete a book that doesn't exist");
         }

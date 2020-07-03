@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace GoodBooks.Services
 {
-    interface IBookService
+    public interface IBookService
     {
         public List<Book> GetAllBooks();
         public Book GetBook(int bookId);
